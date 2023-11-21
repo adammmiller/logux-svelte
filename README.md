@@ -1,38 +1,26 @@
-# create-svelte
+# logux-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Demo app using logux and svelte.
 
-## Creating a project
+## How to run
+This example requires the logux server to be running in a separate process. Clone (https://github.com/logux/examples) and run:
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm start
 ```
 
-## Building
+to start the example server.
 
-To create a production version of your app:
+## logux-svelte
+Clone this repo and run:
 
 ```bash
-npm run build
+pnpm dev
 ```
 
-You can preview the production build with `npm run preview`.
+This will start logux-svelte on port 5174 and proxy requests to logux server running from the step above.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Notes
+
+This example uses nanostores which support the Svelte 4 store contract - this will need updating to use Svelte 5 runes instead of nanostores (or a useStore method for Svelte5 within nanostores).
